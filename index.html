@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Shop<span>Ease</span></div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+    <div class="nav-icons">
+      <button id="darkModeBtn" title="Toggle Dark Mode">🌙</button>
+      <button id="wishlistBtn" title="Wishlist">
+        ❤️ <span id="wishlistCount">0</span>
+      </button>
+      <button id="cartBtn" title="Cart">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Category Filter Bar -->
+  <section class="filter-bar">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="men's clothing">Men's Clothing</option>
+      <option value="women's clothing">Women's Clothing</option>
+      <option value="jewelery">Jewelery</option>
+      <option value="electronics">Electronics</option>
+    </select>
+
+    <select id="sortFilter">
+      <option value="default">Sort By</option>
+      <option value="lowToHigh">Price: Low to High</option>
+      <option value="highToLow">Price: High to Low</option>
+      <option value="rating">Rating</option>
+    </select>
+  </section>
+
+  <!-- Products Grid -->
+  <main>
+    <h2 class="section-title">Our Products</h2>
+    <div id="productGrid" class="product-grid">
+      <!-- Products injected by JS -->
+      <p id="loadingText">Loading products...</p>
+    </div>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <div id="cartOverlay" class="overlay"></div>
+  <aside id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: ₹<span id="cartTotal">0</span></p>
+      <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Wishlist Sidebar -->
+  <div id="wishlistOverlay" class="overlay"></div>
+  <aside id="wishlistSidebar" class="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Wishlist</h3>
+      <button id="closeWishlist">✕</button>
+    </div>
+    <div id="wishlistItems" class="cart-items"></div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutOverlay" class="overlay"></div>
+  <div id="checkoutModal" class="checkout-modal">
+    <button id="closeCheckout" class="close-modal">✕</button>
+    <h3>Checkout</h3>
+    <form id="checkoutForm">
+      <input type="text" id="custName" placeholder="Full Name" required>
+      <input type="email" id="custEmail" placeholder="Email Address" required>
+      <input type="tel" id="custPhone" placeholder="Phone Number" required>
+      <textarea id="custAddress" placeholder="Delivery Address" required></textarea>
+      <button type="submit" class="place-order-btn">Place Order</button>
+    </form>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2026 ShopEase. Built for portfolio demo purposes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
