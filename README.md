@@ -16,7 +16,7 @@ A modern and responsive e-commerce website built using React. The project provid
 ## Tech Stack
 
 - React.js
-- JavaScript (ES6+)
+- JavaScript 
 - HTML5
 - CSS3
 - Vite
