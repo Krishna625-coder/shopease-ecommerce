@@ -2,9 +2,6 @@
 
 A modern and responsive e-commerce website built using React. The project provides a clean shopping experience with product listings, category filtering, search functionality, and a user-friendly interface.
 
-## Preview
-
-![E-Commerce Website](./screenshot.png)
 
 ## Features
 
